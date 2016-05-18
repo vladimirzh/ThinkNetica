@@ -1,9 +1,9 @@
 puts "Please enter the base of triangle"
-base = gets.chomp
+base = gets.chomp.to_f
 
 puts "Please neter the height of triangle?"
-height = gets.chomp
+height = gets.chomp.to_f
 
-area = 0.5 * base.to_i * height.to_i
+area = 0.5 * base * height
 
 puts "The area of triangle is #{area}"
