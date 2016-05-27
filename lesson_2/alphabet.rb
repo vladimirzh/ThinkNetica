@@ -1,15 +1,7 @@
 alphabet = ('a'..'z').to_a
 vovel_array = ['a','e','i','o','u','y']
-vovel_hash = Hash.new
+vovel_hash = {}
 
-#puts alphabet
-
-i=0
-while i<alphabet.size do
-	if vovel_array.include? alphabet[i]
-		vovel_hash[alphabet[i]] = i
-	end
-	i+=1
-end
-
+alphabet.each_with_index{|value,index| vovel_hash[value]=index if vovel_array.include? value}
+			
 puts vovel_hash

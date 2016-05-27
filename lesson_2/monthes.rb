@@ -13,8 +13,4 @@ monthes = {
 	December: 31
 }
 
-monthes.each do |title,days|
-	if days.to_i==30
-		puts title.to_s
-	end
-end
+monthes.each {|title,days| puts title.to_s if days.to_i==30}
