@@ -4,9 +4,9 @@ class Route
   attr_accessor :stations
 
   # Начальная и конечная станции указываютсся при создании маршрута, а промежуточные могут добавляться между ними.
-  def initialize(first_station, last_station = '')
+  def initialize(first_station, last_station)
     @stations = [first_station]
-    @stations << last_station if !last_station.empty?
+    @stations << last_station
   end
 
   # Может добавлять промежуточную станцию в список
